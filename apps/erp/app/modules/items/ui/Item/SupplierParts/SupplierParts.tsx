@@ -1,14 +1,13 @@
-import { MenuIcon, MenuItem } from "@carbon/react";
+import { Card, CardContent, CardHeader, CardTitle, cn } from "@carbon/react";
 import type { ColumnDef } from "@tanstack/react-table";
-import { useCallback, useMemo } from "react";
-import { LuPencil } from "react-icons/lu";
+import { useMemo } from "react";
 import { Outlet, useNavigate } from "react-router";
-import { New, SupplierAvatar } from "~/components";
-import Table from "~/components/Table";
-import { useCurrencyFormatter } from "~/hooks";
+import { SupplierAvatar } from "~/components";
+import Grid from "~/components/Grid";
+import Hyperlink from "~/components/Hyperlink";
+import { useCurrencyFormatter, usePermissions } from "~/hooks";
 import { useCustomColumns } from "~/hooks/useCustomColumns";
 import type { SupplierPart } from "../../../types";
-import useSupplierParts from "./useSupplierParts";
 
 type Part = Pick<
   SupplierPart,
@@ -34,8 +33,8 @@ const SupplierParts = ({
   compact = false
 }: SupplierPartsProps) => {
   const navigate = useNavigate();
-  const { canEdit } = useSupplierParts();
-
+  const permissions = usePermissions();
+  const canEdit = permissions.can("update", "parts");
   const formatter = useCurrencyFormatter();
   const customColumns = useCustomColumns<Part>("supplierPart");
 
@@ -45,7 +44,9 @@ const SupplierParts = ({
         accessorKey: "supplierId",
         header: "Supplier",
         cell: ({ row }) => (
-          <SupplierAvatar supplierId={row.original.supplierId} />
+          <Hyperlink to={row.original.id!}>
+            <SupplierAvatar supplierId={row.original.supplierId} />
+          </Hyperlink>
         )
       },
       {
@@ -99,28 +100,21 @@ const SupplierParts = ({
     return [...defaultColumns, ...customColumns];
   }, [customColumns, formatter]);
 
-  const renderContextMenu = useCallback(
-    (row: Part) => (
-      <MenuItem onClick={() => navigate(row.id!)}>
-        <MenuIcon icon={<LuPencil />} />
-        Edit Supplier Part
-      </MenuItem>
-    ),
-    [navigate]
-  );
-
   return (
     <>
-      <Table<Part>
-        data={supplierParts}
-        columns={columns}
-        count={supplierParts.length}
-        title="Supplier Parts"
-        renderContextMenu={canEdit ? renderContextMenu : undefined}
-        primaryAction={
-          canEdit ? <New label="Supplier Part" to="new" /> : undefined
-        }
-      />
+      <Card className={cn(compact && "border-none p-0 dark:shadow-none")}>
+        <CardHeader className={cn(compact && "px-0")}>
+          <CardTitle>Supplier Parts</CardTitle>
+        </CardHeader>
+        <CardContent className={cn(compact && "px-0")}>
+          <Grid<Part>
+            data={supplierParts}
+            columns={columns}
+            canEdit={false}
+            onNewRow={canEdit ? () => navigate("new") : undefined}
+          />
+        </CardContent>
+      </Card>
       <Outlet />
     </>
   );
