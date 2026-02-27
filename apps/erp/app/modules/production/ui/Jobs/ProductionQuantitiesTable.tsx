@@ -1,4 +1,5 @@
 import { Badge, MenuIcon, MenuItem, useDisclosure } from "@carbon/react";
+import { formatDateTime } from "@carbon/utils";
 import type { ColumnDef } from "@tanstack/react-table";
 import { memo, useCallback, useMemo, useState } from "react";
 import { LuPencil, LuTrash } from "react-icons/lu";
@@ -143,6 +144,11 @@ const ProductionQuantitiesTable = memo(
               {row.original.notes}
             </span>
           )
+        },
+        {
+          accessorKey: "createdAt",
+          header: "Created At",
+          cell: ({ row }) => formatDateTime(row.original.createdAt)
         }
       ];
     }, [operations, people, scrapReasons]);
