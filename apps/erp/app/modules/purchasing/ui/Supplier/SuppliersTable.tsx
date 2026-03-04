@@ -285,7 +285,7 @@ const SuppliersTable = memo(
             }}
           >
             <MenuIcon icon={<LuTrash />} />
-            Delete
+            Delete Supplier
           </MenuItem>
         </>
       ),
