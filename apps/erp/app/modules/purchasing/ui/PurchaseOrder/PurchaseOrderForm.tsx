@@ -26,7 +26,7 @@ import {
   SupplierContact,
   SupplierLocation
 } from "~/components/Form";
-import { usePermissions } from "~/hooks";
+import { usePermissions, useSettings } from "~/hooks";
 import {
   purchaseOrderTypeType,
   purchaseOrderValidator
@@ -40,6 +40,7 @@ type PurchaseOrderFormProps = {
 
 const PurchaseOrderForm = ({ initialValues }: PurchaseOrderFormProps) => {
   const permissions = usePermissions();
+  const settings = useSettings();
   const { carbon } = useCarbon();
   const [supplier, setSupplier] = useState<{
     id: string | undefined;
@@ -137,6 +138,7 @@ const PurchaseOrderForm = ({ initialValues }: PurchaseOrderFormProps) => {
                 name="supplierId"
                 label="Supplier"
                 onChange={onSupplierChange}
+                onlyApproved={settings?.supplierApproval ?? false}
               />
               <Input name="supplierReference" label="Supplier Order Number" />
               <SupplierLocation
