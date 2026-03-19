@@ -322,7 +322,6 @@ const InventoryShelves = ({
                       <Input
                         name="readableId"
                         label={isSerial ? "Serial Number" : "Batch Number"}
-                        helperText="A globally unique identifier is generated behind the scenes"
                       />
                     </>
                   )}
