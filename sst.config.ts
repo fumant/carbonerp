@@ -49,7 +49,7 @@ export default $config({
         CLOUDFLARE_TURNSTILE_SITE_KEY:
           process.env.CLOUDFLARE_TURNSTILE_SITE_KEY,
         CONTROLLED_ENVIRONMENT: process.env.CONTROLLED_ENVIRONMENT,
-        DOMAIN: "carbon.ms",
+        DOMAIN: process.env.DOMAIN ?? "carbon.ms",
         ERP_URL: process.env.URL_ERP ? `https://${process.env.URL_ERP}` : "https://itar.carbon.ms",
         EXCHANGE_RATES_API_KEY: process.env.EXCHANGE_RATES_API_KEY,
         MES_URL: process.env.URL_MES ? `https://${process.env.URL_MES}` : "https://mes.itar.carbon.ms",
@@ -141,7 +141,7 @@ export default $config({
         CLOUDFLARE_TURNSTILE_SITE_KEY:
           process.env.CLOUDFLARE_TURNSTILE_SITE_KEY,
         CONTROLLED_ENVIRONMENT: process.env.CONTROLLED_ENVIRONMENT,
-        DOMAIN: "carbon.ms",
+        DOMAIN: process.env.DOMAIN ?? "carbon.ms",
         ERP_URL: process.env.URL_ERP ? `https://${process.env.URL_ERP}` : "https://itar.carbon.ms",
         EXCHANGE_RATES_API_KEY: process.env.EXCHANGE_RATES_API_KEY,
         MES_URL: process.env.URL_MES ? `https://${process.env.URL_MES}` : "https://mes.itar.carbon.ms",
