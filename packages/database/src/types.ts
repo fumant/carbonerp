@@ -30813,7 +30813,6 @@ export type Database = {
           assetId: string | null
           companyId: string
           convertedAddOnCost: number | null
-          convertedNonTaxableAddOnCost: number | null
           convertedSetupPrice: number | null
           convertedShippingCost: number | null
           convertedUnitPrice: number | null
@@ -30831,7 +30830,6 @@ export type Database = {
           locationId: string | null
           methodType: Database["public"]["Enums"]["methodType"]
           modelUploadId: string | null
-          nonTaxableAddOnCost: number
           opportunityId: string | null
           quantity: number
           salesOrderId: string | null
@@ -30851,7 +30849,6 @@ export type Database = {
           assetId?: string | null
           companyId: string
           convertedAddOnCost?: number | null
-          convertedNonTaxableAddOnCost?: number | null
           convertedSetupPrice?: number | null
           convertedShippingCost?: number | null
           convertedUnitPrice?: number | null
@@ -30869,7 +30866,6 @@ export type Database = {
           locationId?: string | null
           methodType?: Database["public"]["Enums"]["methodType"]
           modelUploadId?: string | null
-          nonTaxableAddOnCost?: number
           opportunityId?: string | null
           quantity?: number
           salesOrderId?: string | null
@@ -30889,7 +30885,6 @@ export type Database = {
           assetId?: string | null
           companyId?: string
           convertedAddOnCost?: number | null
-          convertedNonTaxableAddOnCost?: number | null
           convertedSetupPrice?: number | null
           convertedShippingCost?: number | null
           convertedUnitPrice?: number | null
@@ -30907,7 +30902,6 @@ export type Database = {
           locationId?: string | null
           methodType?: Database["public"]["Enums"]["methodType"]
           modelUploadId?: string | null
-          nonTaxableAddOnCost?: number
           opportunityId?: string | null
           quantity?: number
           salesOrderId?: string | null
@@ -31752,7 +31746,6 @@ export type Database = {
           assetId: string | null
           companyId: string
           convertedAddOnCost: number | null
-          convertedNonTaxableAddOnCost: number | null
           convertedShippingCost: number | null
           convertedUnitPrice: number | null
           createdAt: string
@@ -31768,7 +31761,6 @@ export type Database = {
           locationId: string | null
           methodType: Database["public"]["Enums"]["methodType"]
           modelUploadId: string | null
-          nonTaxableAddOnCost: number
           promisedDate: string | null
           quantityInvoiced: number | null
           quantitySent: number | null
@@ -31796,7 +31788,6 @@ export type Database = {
           assetId?: string | null
           companyId: string
           convertedAddOnCost?: number | null
-          convertedNonTaxableAddOnCost?: number | null
           convertedShippingCost?: number | null
           convertedUnitPrice?: number | null
           createdAt?: string
@@ -31812,7 +31803,6 @@ export type Database = {
           locationId?: string | null
           methodType?: Database["public"]["Enums"]["methodType"]
           modelUploadId?: string | null
-          nonTaxableAddOnCost?: number
           promisedDate?: string | null
           quantityInvoiced?: number | null
           quantitySent?: number | null
@@ -31840,7 +31830,6 @@ export type Database = {
           assetId?: string | null
           companyId?: string
           convertedAddOnCost?: number | null
-          convertedNonTaxableAddOnCost?: number | null
           convertedShippingCost?: number | null
           convertedUnitPrice?: number | null
           createdAt?: string
@@ -31856,7 +31845,6 @@ export type Database = {
           locationId?: string | null
           methodType?: Database["public"]["Enums"]["methodType"]
           modelUploadId?: string | null
-          nonTaxableAddOnCost?: number
           promisedDate?: string | null
           quantityInvoiced?: number | null
           quantitySent?: number | null
@@ -33341,7 +33329,7 @@ export type Database = {
           },
         ]
       }
-      searchIndex_7gYaboCg4bgSHUXebP88ah: {
+      searchIndex_3VCMFwYSx4XmioYxbouFts: {
         Row: {
           createdAt: string
           description: string | null
@@ -47961,14 +47949,14 @@ export type Database = {
           },
           {
             foreignKeyName: "partner_id_fkey"
-            columns: ["id"]
+            columns: ["supplierLocationId"]
             isOneToOne: false
             referencedRelation: "supplierLocation"
             referencedColumns: ["id"]
           },
           {
             foreignKeyName: "partner_id_fkey"
-            columns: ["supplierLocationId"]
+            columns: ["id"]
             isOneToOne: false
             referencedRelation: "supplierLocation"
             referencedColumns: ["id"]
@@ -52175,7 +52163,6 @@ export type Database = {
           assetId: string | null
           companyId: string | null
           convertedAddOnCost: number | null
-          convertedNonTaxableAddOnCost: number | null
           convertedSetupPrice: number | null
           convertedShippingCost: number | null
           convertedUnitPrice: number | null
@@ -52199,7 +52186,6 @@ export type Database = {
           locationId: string | null
           methodType: Database["public"]["Enums"]["methodType"] | null
           modelUploadId: string | null
-          nonTaxableAddOnCost: number | null
           opportunityId: string | null
           quantity: number | null
           salesOrderId: string | null
@@ -52508,7 +52494,7 @@ export type Database = {
         Relationships: [
           {
             foreignKeyName: "address_countryCode_fkey"
-            columns: ["invoiceCountryCode"]
+            columns: ["shipmentCountryCode"]
             isOneToOne: false
             referencedRelation: "country"
             referencedColumns: ["alpha2"]
@@ -52522,7 +52508,7 @@ export type Database = {
           },
           {
             foreignKeyName: "address_countryCode_fkey"
-            columns: ["shipmentCountryCode"]
+            columns: ["invoiceCountryCode"]
             isOneToOne: false
             referencedRelation: "country"
             referencedColumns: ["alpha2"]
@@ -52807,7 +52793,6 @@ export type Database = {
           autodeskUrn: string | null
           companyId: string | null
           convertedAddOnCost: number | null
-          convertedNonTaxableAddOnCost: number | null
           convertedShippingCost: number | null
           convertedUnitPrice: number | null
           createdAt: string | null
@@ -52831,7 +52816,6 @@ export type Database = {
           modelPath: string | null
           modelSize: number | null
           modelUploadId: string | null
-          nonTaxableAddOnCost: number | null
           orderDate: string | null
           promisedDate: string | null
           quantityInvoiced: number | null
@@ -55501,6 +55485,7 @@ export type Database = {
           note: string | null
           shiftId: string | null
           shiftName: string | null
+          status: string | null
           updatedAt: string | null
           updatedBy: string | null
         }
@@ -56268,6 +56253,22 @@ export type Database = {
       attach_event_trigger: {
         Args: { sync_functions?: string[]; table_name_text: string }
         Returns: undefined
+      }
+      calculate_quantity_to_order: {
+        Args: {
+          p_demand_accumulation_period: number
+          p_demand_accumulation_safety_stock: number
+          p_lot_size: number
+          p_maximum_inventory_quantity: number
+          p_maximum_order_quantity: number
+          p_minimum_order_quantity: number
+          p_order_multiple: number
+          p_projections: number[]
+          p_reorder_point: number
+          p_reorder_quantity: number
+          p_reordering_policy: Database["public"]["Enums"]["itemReorderingPolicy"]
+        }
+        Returns: number
       }
       check_api_key_rate_limit: {
         Args: { p_api_key_id: string; p_limit: number; p_window: string }
@@ -57244,6 +57245,7 @@ export type Database = {
           name: string
           orderMultiple: number
           quantityOnHand: number
+          quantityToOrder: number
           readableIdWithRevision: string
           reorderingPolicy: Database["public"]["Enums"]["itemReorderingPolicy"]
           reorderPoint: number
@@ -57405,6 +57407,7 @@ export type Database = {
           purchasingBlocked: boolean
           purchasingUnitOfMeasureCode: string
           quantityOnHand: number
+          quantityToOrder: number
           readableIdWithRevision: string
           reorderingPolicy: Database["public"]["Enums"]["itemReorderingPolicy"]
           reorderPoint: number
