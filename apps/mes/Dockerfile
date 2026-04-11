@@ -1,4 +1,4 @@
-FROM node:20.20 AS deps
+FROM node:22 AS deps
 WORKDIR /repo
 # Install specific npm version
 RUN npm install -g npm@10.8.2
@@ -17,7 +17,7 @@ ENV NODE_OPTIONS=${NODE_OPTIONS:-"--max-old-space-size=4096"}
 RUN npx lingui compile --namespace es
 RUN npx turbo run build --filter=./apps/mes
 
-FROM node:20-slim
+FROM node:22-slim
 WORKDIR /repo
 # Install specific npm version
 RUN npm install -g npm@10.8.2
