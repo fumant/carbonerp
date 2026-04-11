@@ -3,7 +3,7 @@ WORKDIR /repo
 # Install specific npm version
 RUN npm install -g npm@10.8.2
 # Copy root manifests for workspaces
-COPY package.json package-lock.json turbo.json ./
+COPY package.json package-lock.json turbo.json lingui.config.js ./
 # Copy only what we need to install and build
 COPY apps ./apps
 COPY packages ./packages
@@ -14,7 +14,7 @@ FROM deps AS build
 ARG NODE_OPTIONS
 ENV NODE_OPTIONS=${NODE_OPTIONS:-"--max-old-space-size=4096"}
 # Build only ERP and its deps
-RUN cd apps/erp && npx lingui compile --config ../../lingui.config.js && cd ../..
+RUN npx lingui compile
 RUN npx turbo run build --filter=./apps/erp
 
 FROM node:20-slim
