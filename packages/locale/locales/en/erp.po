@@ -1336,7 +1336,7 @@ msgstr "Audit logging is not enabled"
 msgid "Audit Logs"
 msgstr "Audit Logs"
 
-#: apps/erp/app/routes/_public+/login.tsx:287
+#: apps/erp/app/routes/_public+/login.tsx:285
 msgid "Authentication Error"
 msgstr "Authentication Error"
 
@@ -1567,11 +1567,11 @@ msgstr "Buyer"
 msgid "by {byUser}"
 msgstr "by {byUser}"
 
-#: apps/erp/app/routes/_public+/invite.$code.tsx:170
+#: apps/erp/app/routes/_public+/invite.$code.tsx:174
 msgid "By accepting the invite, you agree to the <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "By accepting the invite, you agree to the <0>Terms of Service</0> and <1>Privacy Policy</1>."
 
-#: apps/erp/app/routes/_public+/login.tsx:370
+#: apps/erp/app/routes/_public+/login.tsx:368
 msgid "By signing in, you agree to the <0>Terms of Service</0> and <1>Privacy Policy.</1>"
 msgstr "By signing in, you agree to the <0>Terms of Service</0> and <1>Privacy Policy.</1>"
 
@@ -1853,11 +1853,11 @@ msgstr "Carbon client not found"
 msgid "Carbon column"
 msgstr "Carbon column"
 
-#: apps/erp/app/routes/_public+/invite.$code.tsx:114
-#: apps/erp/app/routes/_public+/invite.$code.tsx:144
+#: apps/erp/app/routes/_public+/invite.$code.tsx:116
+#: apps/erp/app/routes/_public+/invite.$code.tsx:148
 #: apps/erp/app/routes/_public+/login.tsx:227
 #: apps/erp/app/routes/_public+/magic-link.tsx:26
-#: apps/erp/app/routes/_public+/verify.tsx:145
+#: apps/erp/app/routes/_public+/verify.tsx:147
 msgid "Carbon Logo"
 msgstr "Carbon Logo"
 
@@ -4544,7 +4544,7 @@ msgstr "Edit Work Center"
 msgid "Email"
 msgstr "Email"
 
-#: apps/erp/app/routes/_public+/login.tsx:326
+#: apps/erp/app/routes/_public+/login.tsx:324
 #: apps/erp/app/routes/x+/users+/operators.$operatorId.tsx:143
 msgid "Email Address"
 msgstr "Email Address"
@@ -5992,7 +5992,7 @@ msgstr "Inv. Adjustment Variance"
 msgid "Inv. Interim Accrual"
 msgstr "Inv. Interim Accrual"
 
-#: apps/erp/app/routes/_public+/invite.$code.tsx:118
+#: apps/erp/app/routes/_public+/invite.$code.tsx:122
 msgid "Invalid Invite"
 msgstr "Invalid Invite"
 
@@ -6429,7 +6429,7 @@ msgid "Jobs Required"
 msgstr "Jobs Required"
 
 #. placeholder {0}: company?.name ?? "Company"
-#: apps/erp/app/routes/_public+/invite.$code.tsx:164
+#: apps/erp/app/routes/_public+/invite.$code.tsx:168
 msgid "Join {0}"
 msgstr "Join {0}"
 
@@ -6815,7 +6815,7 @@ msgstr "Lock"
 msgid "Log In"
 msgstr "Log In"
 
-#: apps/erp/app/routes/_public+/login.tsx:364
+#: apps/erp/app/routes/_public+/login.tsx:362
 msgid "Login or create a new account"
 msgstr "Login or create a new account"
 
@@ -9866,7 +9866,7 @@ msgstr "Record deleted"
 msgid "Records"
 msgstr "Records"
 
-#: apps/erp/app/routes/_public+/login.tsx:256
+#: apps/erp/app/routes/_public+/login.tsx:254
 msgid "Redirecting to verification page..."
 msgstr "Redirecting to verification page..."
 
@@ -10200,7 +10200,7 @@ msgstr "Results per page"
 msgid "Retry response"
 msgstr "Retry response"
 
-#: apps/erp/app/routes/_public+/invite.$code.tsx:129
+#: apps/erp/app/routes/_public+/invite.$code.tsx:133
 msgid "Return Home"
 msgstr "Return Home"
 
@@ -11381,15 +11381,15 @@ msgstr "Show part thumbnails on quotes, sales orders, sales invoices, and shipme
 msgid "Show sync options"
 msgstr "Show sync options"
 
-#: apps/erp/app/routes/_public+/login.tsx:339
+#: apps/erp/app/routes/_public+/login.tsx:337
 msgid "Sign in with Email"
 msgstr "Sign in with Email"
 
-#: apps/erp/app/routes/_public+/login.tsx:303
+#: apps/erp/app/routes/_public+/login.tsx:301
 msgid "Sign in with Google"
 msgstr "Sign in with Google"
 
-#: apps/erp/app/routes/_public+/login.tsx:316
+#: apps/erp/app/routes/_public+/login.tsx:314
 msgid "Sign in with Outlook"
 msgstr "Sign in with Outlook"
 
@@ -13128,8 +13128,8 @@ msgstr "Use ... to get the next part ID"
 msgid "Use ... to get the next tool ID"
 msgstr "Use ... to get the next tool ID"
 
-#: apps/erp/app/routes/_public+/login.tsx:269
-#: apps/erp/app/routes/_public+/verify.tsx:178
+#: apps/erp/app/routes/_public+/login.tsx:267
+#: apps/erp/app/routes/_public+/verify.tsx:182
 msgid "Use a different email"
 msgstr "Use a different email"
 
@@ -13204,12 +13204,12 @@ msgstr "Value"
 msgid "VAT Number"
 msgstr "VAT Number"
 
-#: apps/erp/app/routes/_public+/verify.tsx:168
+#: apps/erp/app/routes/_public+/verify.tsx:172
 msgid "Verification Error"
 msgstr "Verification Error"
 
 #: apps/erp/app/routes/_public+/login.tsx:248
-#: apps/erp/app/routes/_public+/verify.tsx:158
+#: apps/erp/app/routes/_public+/verify.tsx:162
 msgid "Verify your email"
 msgstr "Verify your email"
 
@@ -13459,7 +13459,7 @@ msgstr "Watch full video"
 msgid "We've mapped each column to what we believe is correct, but please review the data below to confirm it's accurate."
 msgstr "We've mapped each column to what we believe is correct, but please review the data below to confirm it's accurate."
 
-#: apps/erp/app/routes/_public+/verify.tsx:161
+#: apps/erp/app/routes/_public+/verify.tsx:165
 msgid "We've sent a verification code to {email}"
 msgstr "We've sent a verification code to {email}"
 
@@ -13522,7 +13522,7 @@ msgstr "Weighted Average"
 msgid "Weighted average cost over last year calculated when the invoice is posted"
 msgstr "Weighted average cost over last year calculated when the invoice is posted"
 
-#: apps/erp/app/routes/_public+/invite.$code.tsx:154
+#: apps/erp/app/routes/_public+/invite.$code.tsx:158
 #: apps/erp/app/routes/onboarding+/_index.tsx:36
 msgid "Welcome to Carbon"
 msgstr "Welcome to Carbon"
@@ -13730,7 +13730,7 @@ msgstr "Your Console PIN"
 msgid "Your Email"
 msgstr "Your Email"
 
-#: apps/erp/app/routes/_public+/invite.$code.tsx:121
+#: apps/erp/app/routes/_public+/invite.$code.tsx:125
 msgid "Your invitation is invalid or has already been accepted. Please contact support if you believe this is an error."
 msgstr "Your invitation is invalid or has already been accepted. Please contact support if you believe this is an error."
 
