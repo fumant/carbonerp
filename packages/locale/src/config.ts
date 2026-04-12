@@ -24,4 +24,3 @@ export const resolveLanguage = (
   }
   return defaultLanguage;
 };
-// Test comment
