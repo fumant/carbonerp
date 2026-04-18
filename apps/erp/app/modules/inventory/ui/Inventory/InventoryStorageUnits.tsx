@@ -47,32 +47,38 @@ import {
 import { Outlet } from "react-router";
 import type { z } from "zod";
 import { Enumerable } from "~/components/Enumerable";
-import { Input, Location, Select, Shelf, TextArea } from "~/components/Form";
+import {
+  Input,
+  Location,
+  Select,
+  StorageUnit,
+  TextArea
+} from "~/components/Form";
 import { useUnitOfMeasure } from "~/components/Form/UnitOfMeasure";
 import { usePermissions } from "~/hooks";
 import type {
-  ItemShelfQuantities,
+  ItemStorageUnitQuantities,
   itemTrackingTypes,
   pickMethodValidator
 } from "~/modules/items";
 import { path } from "~/utils/path";
 import { inventoryAdjustmentValidator } from "../../inventory.models";
 
-type InventoryShelvesProps = {
+type InventoryStorageUnitsProps = {
   pickMethod: z.infer<typeof pickMethodValidator>;
-  itemShelfQuantities: ItemShelfQuantities[];
+  itemStorageUnitQuantities: ItemStorageUnitQuantities[];
   itemUnitOfMeasureCode: string;
   itemTrackingType: (typeof itemTrackingTypes)[number];
-  shelves: { value: string; label: string }[];
+  storageUnits: { value: string; label: string }[];
 };
 
-const InventoryShelves = ({
-  itemShelfQuantities,
+const InventoryStorageUnits = ({
+  itemStorageUnitQuantities,
   itemUnitOfMeasureCode,
   itemTrackingType,
   pickMethod,
-  shelves
-}: InventoryShelvesProps) => {
+  storageUnits
+}: InventoryStorageUnitsProps) => {
   const permissions = usePermissions();
   const { t } = useLingui();
   const adjustmentModal = useDisclosure();
@@ -88,25 +94,29 @@ const InventoryShelves = ({
   const isBatch = itemTrackingType === "Batch";
 
   const [quantity, setQuantity] = useState(1);
-  const [selectedShelfId, setSelectedShelfId] = useState<string | null>(null);
+  const [selectedStorageUnitId, setSelectedStorageUnitId] = useState<
+    string | null
+  >(null);
   const [selectedTrackedEntityId, setSelectedTrackedEntityId] = useState<
     string | null
   >(null);
   const [selectedReadableId, setSelectedReadableId] = useState<string | null>(
     null
   );
+  const [isEditingRow, setIsEditingRow] = useState(false);
 
   const isEditing = selectedTrackedEntityId !== null;
 
   const openAdjustmentModal = (
-    shelfId?: string,
+    storageUnitId?: string,
     trackedEntityId?: string,
     readableId?: string,
     currentQuantity?: number
   ) => {
-    setSelectedShelfId(shelfId || null);
+    setSelectedStorageUnitId(storageUnitId || null);
     setSelectedTrackedEntityId(trackedEntityId || null);
     setSelectedReadableId(readableId || null);
+    setIsEditingRow(storageUnitId !== undefined);
     if (currentQuantity !== undefined) {
       setQuantity(currentQuantity);
     }
@@ -140,7 +150,7 @@ const InventoryShelves = ({
         <HStack className="w-full justify-between">
           <CardHeader>
             <CardTitle>
-              <Trans>Shelves</Trans>
+              <Trans>Storage Units</Trans>
             </CardTitle>
             <CardDescription>
               <Enumerable
@@ -163,7 +173,7 @@ const InventoryShelves = ({
             <Thead>
               <Tr>
                 <Th>
-                  <Trans>Shelf</Trans>
+                  <Trans>Storage Unit</Trans>
                 </Th>
 
                 <Th>
@@ -176,13 +186,13 @@ const InventoryShelves = ({
               </Tr>
             </Thead>
             <Tbody>
-              {itemShelfQuantities
+              {itemStorageUnitQuantities
                 .filter((item) => item.quantity !== 0)
                 .map((item, index) => (
                   <Tr key={index}>
                     <Td>
-                      {shelves.find((s) => s.value === item.shelfId)?.label ||
-                        item.shelfId}
+                      {storageUnits.find((s) => s.value === item.storageUnitId)
+                        ?.label || item.storageUnitId}
                     </Td>
 
                     <Td>
@@ -213,7 +223,7 @@ const InventoryShelves = ({
                           <DropdownMenuItem
                             onClick={() =>
                               openAdjustmentModal(
-                                item.shelfId,
+                                item.storageUnitId,
                                 item.trackedEntityId,
                                 item.readableId,
                                 item.quantity
@@ -276,9 +286,9 @@ const InventoryShelves = ({
                 itemId: pickMethod.itemId,
                 quantity: isSerial && !isEditing ? 1 : quantity,
                 locationId: pickMethod.locationId,
-                shelfId: selectedShelfId || undefined,
-                originalShelfId: isEditing
-                  ? selectedShelfId || undefined
+                storageUnitId: selectedStorageUnitId || undefined,
+                originalStorageUnitId: isEditing
+                  ? selectedStorageUnitId || undefined
                   : undefined,
                 adjustmentType: "Set Quantity",
                 trackedEntityId: selectedTrackedEntityId || nanoid(),
@@ -293,14 +303,15 @@ const InventoryShelves = ({
               </ModalHeader>
               <ModalBody>
                 <Hidden name="itemId" />
-                {isEditing && <Hidden name="originalShelfId" />}
+                {isEditing && <Hidden name="originalStorageUnitId" />}
 
                 <VStack spacing={2}>
                   <Location name="locationId" label={t`Location`} isReadOnly />
-                  <Shelf
-                    name="shelfId"
+                  <StorageUnit
+                    name="storageUnitId"
                     locationId={pickMethod.locationId}
-                    label={t`Shelf`}
+                    label={t`Storage Unit`}
+                    isReadOnly={isEditingRow}
                   />
                   <Select
                     name="adjustmentType"
@@ -376,4 +387,4 @@ const InventoryShelves = ({
   );
 };
 
-export default InventoryShelves;
+export default InventoryStorageUnits;

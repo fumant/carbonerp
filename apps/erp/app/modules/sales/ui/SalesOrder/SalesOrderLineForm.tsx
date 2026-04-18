@@ -43,7 +43,7 @@ import {
   Number,
   NumberControlled,
   SelectControlled,
-  Shelf,
+  StorageUnit,
   Submit,
   UnitOfMeasure
 } from "~/components/Form";
@@ -54,7 +54,7 @@ import {
   useRouteData,
   useUser
 } from "~/hooks";
-import { getDefaultShelfForJob } from "~/modules/inventory/inventory.service";
+import { getDefaultStorageUnitForJob } from "~/modules/inventory/inventory.service";
 import { methodType } from "~/modules/shared";
 import { useItems } from "~/stores";
 import { path } from "~/utils/path";
@@ -110,7 +110,7 @@ const SalesOrderLineForm = ({
     description: string;
     unitPrice: number;
     uom: string;
-    shelfId: string;
+    storageUnitId: string;
     modelUploadId: string | null;
     priceListId: string | null;
     priceListName: string | null;
@@ -121,7 +121,7 @@ const SalesOrderLineForm = ({
     methodType: initialValues.methodType ?? "",
     unitPrice: initialValues.unitPrice ?? 0,
     uom: initialValues.unitOfMeasureCode ?? "",
-    shelfId: initialValues.shelfId ?? "",
+    storageUnitId: initialValues.storageUnitId ?? "",
     modelUploadId: initialValues.modelUploadId ?? null,
     priceListId:
       (initialValues as { priceListId?: string | null }).priceListId ?? null,
@@ -159,7 +159,7 @@ const SalesOrderLineForm = ({
       unitPrice: 0,
       methodType: "",
       uom: "EA",
-      shelfId: "",
+      storageUnitId: "",
       modelUploadId: null,
       priceListId: null,
       priceListName: null,
@@ -237,8 +237,14 @@ const SalesOrderLineForm = ({
         .maybeSingle()
     ]);
 
-    const defaultShelfId = locationId
-      ? await getDefaultShelfForJob(carbon, itemId, locationId, company.id)
+    // Get default storage unit or storage unit with highest quantity
+    const defaultStorageUnitId = locationId
+      ? await getDefaultStorageUnitForJob(
+          carbon,
+          itemId,
+          locationId,
+          company.id
+        )
       : null;
 
     let resolvedPrice = price.data?.unitSalePrice ?? 0;
@@ -256,7 +262,7 @@ const SalesOrderLineForm = ({
       methodType: item.data?.defaultMethodType ?? "",
       unitPrice: resolvedPrice,
       uom: item.data?.unitOfMeasureCode ?? "EA",
-      shelfId: defaultShelfId ?? "",
+      storageUnitId: defaultStorageUnitId ?? "",
       modelUploadId: item.data?.modelUploadId ?? null,
       priceListId,
       priceListName: result?.priceListName ?? null,
@@ -272,7 +278,8 @@ const SalesOrderLineForm = ({
     setLocationId(newLocation.value);
     if (!itemData.itemId) return;
 
-    const defaultShelfId = await getDefaultShelfForJob(
+    // Get default storage unit or storage unit with highest quantity for the new location
+    const defaultStorageUnitId = await getDefaultStorageUnitForJob(
       carbon,
       itemData.itemId,
       newLocation.value,
@@ -281,7 +288,7 @@ const SalesOrderLineForm = ({
 
     setItemData((d) => ({
       ...d,
-      shelfId: defaultShelfId ?? ""
+      storageUnitId: defaultStorageUnitId ?? ""
     }));
   };
 
@@ -419,6 +426,7 @@ const SalesOrderLineForm = ({
                       type={lineType as "Part"}
                       typeFieldName="salesOrderLineType"
                       value={itemData.itemId}
+                      locationId={locationId}
                       onChange={(value) => {
                         onChange(value?.value as string);
                       }}
@@ -524,17 +532,17 @@ const SalesOrderLineForm = ({
                           "Fixture",
                           "Consumable"
                         ].includes(lineType) && (
-                          <Shelf
-                            name="shelfId"
-                            label={t`Shelf`}
+                          <StorageUnit
+                            name="storageUnitId"
+                            label={t`Storage Unit`}
                             locationId={locationId}
                             itemId={itemData.itemId}
-                            value={itemData.shelfId ?? undefined}
+                            value={itemData.storageUnitId ?? undefined}
                             onChange={(newValue) => {
                               if (newValue) {
                                 setItemData((d) => ({
                                   ...d,
-                                  shelfId: newValue?.id
+                                  storageUnitId: newValue?.id
                                 }));
                               }
                             }}

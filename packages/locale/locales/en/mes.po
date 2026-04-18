@@ -83,10 +83,10 @@ msgstr "Add"
 msgid "Add & Issue"
 msgstr "Add & Issue"
 
-#: apps/mes/app/components/AdjustInventory.tsx:112
-#: apps/mes/app/components/AdjustInventory.tsx:117
-#: apps/mes/app/components/AdjustInventory.tsx:140
-#: apps/mes/app/components/AdjustInventory.tsx:193
+#: apps/mes/app/components/AdjustInventory.tsx:114
+#: apps/mes/app/components/AdjustInventory.tsx:119
+#: apps/mes/app/components/AdjustInventory.tsx:142
+#: apps/mes/app/components/AdjustInventory.tsx:195
 msgid "Add Inventory"
 msgstr "Add Inventory"
 
@@ -172,7 +172,7 @@ msgstr "But don't worry. You can use the forgot password flow to request a new m
 msgid "By signing in, you agree to the <0>Terms of Service</0> and <1>Privacy Policy.</1>"
 msgstr "By signing in, you agree to the <0>Terms of Service</0> and <1>Privacy Policy.</1>"
 
-#: apps/mes/app/components/AdjustInventory.tsx:188
+#: apps/mes/app/components/AdjustInventory.tsx:190
 #: apps/mes/app/components/EndShift.tsx:141
 #: apps/mes/app/components/Feedback.tsx:139
 #: apps/mes/app/components/JobOperation/components/QuantityModal.tsx:268
@@ -316,8 +316,8 @@ msgid "Deadline"
 msgstr "Deadline"
 
 #: apps/mes/app/components/JobOperation/JobOperation.tsx:1119
-msgid "Default Shelf"
-msgstr "Default Shelf"
+msgid "Default Storage Unit"
+msgstr "Default Storage Unit"
 
 #: apps/mes/app/components/JobOperation/components/Step.tsx:613
 #: apps/mes/app/routes/x+/timecard.tsx:457
@@ -427,7 +427,7 @@ msgstr "Error"
 msgid "Estimated"
 msgstr "Estimated"
 
-#: apps/mes/app/components/AdjustInventory.tsx:94
+#: apps/mes/app/components/AdjustInventory.tsx:96
 msgid "Failed to complete inventory adjustment"
 msgstr "Failed to complete inventory adjustment"
 
@@ -439,9 +439,9 @@ msgstr "Failed to end operations"
 msgid "Failed to fetch active operations"
 msgstr "Failed to fetch active operations"
 
-#: apps/mes/app/components/AdjustInventory.tsx:63
-msgid "Failed to fetch shelves"
-msgstr "Failed to fetch shelves"
+#: apps/mes/app/components/AdjustInventory.tsx:65
+msgid "Failed to fetch storageUnits"
+msgstr "Failed to fetch storageUnits"
 
 #. placeholder {0}: fileUpload.name
 #: apps/mes/app/components/JobOperation/components/Step.tsx:385
@@ -511,7 +511,7 @@ msgstr "In Progress"
 msgid "Insufficient quantity"
 msgstr "Insufficient quantity"
 
-#: apps/mes/app/components/AdjustInventory.tsx:89
+#: apps/mes/app/components/AdjustInventory.tsx:91
 msgid "Inventory adjustment completed"
 msgstr "Inventory adjustment completed"
 
@@ -535,7 +535,7 @@ msgstr "Issue"
 msgid "Issue Material"
 msgstr "Issue Material"
 
-#: apps/mes/app/components/AdjustInventory.tsx:162
+#: apps/mes/app/components/AdjustInventory.tsx:164
 #: apps/mes/app/components/JobOperation/JobOperation.tsx:1962
 #: apps/mes/app/components/MaintenanceDispatch/MaintenanceAddPartModal.tsx:313
 msgid "Item"
@@ -631,11 +631,11 @@ msgstr "Maintenance"
 msgid "Maintenance Completed"
 msgstr "Maintenance Completed"
 
-#: apps/mes/app/components/AdjustInventory.tsx:147
+#: apps/mes/app/components/AdjustInventory.tsx:149
 msgid "Manually add items to inventory"
 msgstr "Manually add items to inventory"
 
-#: apps/mes/app/components/AdjustInventory.tsx:149
+#: apps/mes/app/components/AdjustInventory.tsx:151
 msgid "Manually remove items from inventory"
 msgstr "Manually remove items from inventory"
 
@@ -918,7 +918,7 @@ msgstr "Processes"
 msgid "Progress"
 msgstr "Progress"
 
-#: apps/mes/app/components/AdjustInventory.tsx:168
+#: apps/mes/app/components/AdjustInventory.tsx:170
 #: apps/mes/app/components/JobOperation/components/QuantityModal.tsx:236
 #: apps/mes/app/components/JobOperation/JobOperation.tsx:2228
 #: apps/mes/app/components/MaintenanceDispatch/MaintenanceAddPartModal.tsx:335
@@ -956,10 +956,10 @@ msgstr "Remove"
 msgid "Remove filter"
 msgstr "Remove filter"
 
-#: apps/mes/app/components/AdjustInventory.tsx:112
-#: apps/mes/app/components/AdjustInventory.tsx:117
-#: apps/mes/app/components/AdjustInventory.tsx:142
-#: apps/mes/app/components/AdjustInventory.tsx:195
+#: apps/mes/app/components/AdjustInventory.tsx:114
+#: apps/mes/app/components/AdjustInventory.tsx:119
+#: apps/mes/app/components/AdjustInventory.tsx:144
+#: apps/mes/app/components/AdjustInventory.tsx:197
 msgid "Remove Inventory"
 msgstr "Remove Inventory"
 
@@ -1117,10 +1117,6 @@ msgstr "Set clock-out time"
 msgid "Setup"
 msgstr "Setup"
 
-#: apps/mes/app/components/AdjustInventory.tsx:170
-msgid "Shelf"
-msgstr "Shelf"
-
 #: apps/mes/app/routes/_public+/login.tsx:239
 msgid "Sign in with Email"
 msgstr "Sign in with Email"
@@ -1188,6 +1184,10 @@ msgstr "Steps"
 #: apps/mes/app/components/JobOperation/components/QuantityModal.tsx:223
 msgid "Steps are missing"
 msgstr "Steps are missing"
+
+#: apps/mes/app/components/AdjustInventory.tsx:172
+msgid "Storage Unit"
+msgstr "Storage Unit"
 
 #: apps/mes/app/components/Suggestion.tsx:160
 msgid "Submit anonymously"
