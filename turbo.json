@@ -10,11 +10,21 @@
         ".next/**",
         "!.next/cache/**"
       ],
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build", "//#lingui:compile"]
     },
     "carbon#build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["^build", "//#lingui:compile"],
       "outputs": ["api/index.js", "api/build/**", "public/build/**"]
+    },
+    "//#lingui:compile": {
+      "inputs": [
+        "lingui.config.js",
+        "apps/erp/app/**",
+        "apps/mes/app/**",
+        "packages/react/src/**",
+        "packages/locale/locales/**/*.po"
+      ],
+      "outputs": ["packages/locale/locales/**/*.js"]
     },
     "test": {
       "cache": false,
