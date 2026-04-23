@@ -42,6 +42,8 @@ import { MethodItemTypeIcon } from "../Icons";
 
 type ItemSelectProps = Omit<ComboboxProps, "options" | "type" | "inline"> & {
   blacklist?: string[];
+  growDropdownToContent?: boolean;
+  showHoverTitle?: boolean;
   includeInactive?: boolean;
   inline?: boolean;
   isConfigured?: boolean;
@@ -220,6 +222,8 @@ const Item = ({
             ref={triggerRef}
             options={options}
             {...props}
+            growDropdownToContent={props.growDropdownToContent}
+            showHoverTitle={props.showHoverTitle}
             inline={props.inline ? ItemPreview : undefined}
             value={value?.replace(/"/g, '\\"')}
             onChange={(newValue) => {
