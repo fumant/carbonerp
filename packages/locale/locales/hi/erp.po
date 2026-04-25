@@ -2762,7 +2762,7 @@ msgstr "लागत और पोस्टिंग"
 
 #: apps/erp/app/components/DeferredFiles.tsx:67
 msgid "Couldn't load documents"
-msgstr ""
+msgstr "दस्तावेज़ लोड नहीं हो सके"
 
 #: apps/erp/app/components/Form/Country.tsx:15
 #: apps/erp/app/modules/resources/ui/Locations/LocationsTable.tsx:82
@@ -10577,7 +10577,7 @@ msgstr "प्रति पृष्ठ परिणाम"
 
 #: apps/erp/app/components/DeferredFiles.tsx:81
 msgid "Retry"
-msgstr ""
+msgstr "पुनः प्रयास करें"
 
 #: apps/erp/app/components/Chat/messages/MessageActions.tsx:143
 msgid "Retry response"
@@ -11513,7 +11513,7 @@ msgstr "प्रत्येक लागत श्रेणी के लि�
 
 #: apps/erp/app/modules/production/ui/Schedule/Kanban/components/JobCard.tsx:381
 msgid "Set due date"
-msgstr ""
+msgstr "देय तारीख सेट करें"
 
 #: apps/erp/app/modules/sales/ui/Pricing/PriceOverridesTable.tsx:289
 msgid "Set Pricing"
@@ -12745,7 +12745,7 @@ msgstr "भाग का आकार"
 
 #: apps/erp/app/components/DeferredFiles.tsx:70
 msgid "The storage service didn't respond in time. Please try again."
-msgstr ""
+msgstr "स्टोरेज सेवा समय पर प्रतिक्रिया नहीं दे सकी। कृपया पुनः प्रयास करें।"
 
 #: apps/erp/app/modules/items/ui/Item/ItemCostHistoryChart.tsx:276
 msgid "The unit price of the item at the time of the purchase"

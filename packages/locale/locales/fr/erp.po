@@ -2762,7 +2762,7 @@ msgstr "Coûts et comptabilisation"
 
 #: apps/erp/app/components/DeferredFiles.tsx:67
 msgid "Couldn't load documents"
-msgstr ""
+msgstr "Impossible de charger les documents"
 
 #: apps/erp/app/components/Form/Country.tsx:15
 #: apps/erp/app/modules/resources/ui/Locations/LocationsTable.tsx:82
@@ -10577,7 +10577,7 @@ msgstr "Résultats par page"
 
 #: apps/erp/app/components/DeferredFiles.tsx:81
 msgid "Retry"
-msgstr ""
+msgstr "Réessayer"
 
 #: apps/erp/app/components/Chat/messages/MessageActions.tsx:143
 msgid "Retry response"
@@ -11513,7 +11513,7 @@ msgstr "Définir les pourcentages de majoration par défaut pour chaque catégor
 
 #: apps/erp/app/modules/production/ui/Schedule/Kanban/components/JobCard.tsx:381
 msgid "Set due date"
-msgstr ""
+msgstr "Définir la date d'échéance"
 
 #: apps/erp/app/modules/sales/ui/Pricing/PriceOverridesTable.tsx:289
 msgid "Set Pricing"
@@ -12745,7 +12745,7 @@ msgstr "La taille de la pièce"
 
 #: apps/erp/app/components/DeferredFiles.tsx:70
 msgid "The storage service didn't respond in time. Please try again."
-msgstr ""
+msgstr "Le service de stockage n'a pas répondu à temps. Veuillez réessayer."
 
 #: apps/erp/app/modules/items/ui/Item/ItemCostHistoryChart.tsx:276
 msgid "The unit price of the item at the time of the purchase"

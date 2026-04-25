@@ -2762,7 +2762,7 @@ msgstr "成本与过账"
 
 #: apps/erp/app/components/DeferredFiles.tsx:67
 msgid "Couldn't load documents"
-msgstr ""
+msgstr "无法加载文档"
 
 #: apps/erp/app/components/Form/Country.tsx:15
 #: apps/erp/app/modules/resources/ui/Locations/LocationsTable.tsx:82
@@ -10577,7 +10577,7 @@ msgstr "每页结果数"
 
 #: apps/erp/app/components/DeferredFiles.tsx:81
 msgid "Retry"
-msgstr ""
+msgstr "重试"
 
 #: apps/erp/app/components/Chat/messages/MessageActions.tsx:143
 msgid "Retry response"
@@ -11513,7 +11513,7 @@ msgstr "为新报价行中的每个成本类别设置默认加价百分比"
 
 #: apps/erp/app/modules/production/ui/Schedule/Kanban/components/JobCard.tsx:381
 msgid "Set due date"
-msgstr ""
+msgstr "设置截止日期"
 
 #: apps/erp/app/modules/sales/ui/Pricing/PriceOverridesTable.tsx:289
 msgid "Set Pricing"
@@ -12745,7 +12745,7 @@ msgstr "零件的尺寸"
 
 #: apps/erp/app/components/DeferredFiles.tsx:70
 msgid "The storage service didn't respond in time. Please try again."
-msgstr ""
+msgstr "存储服务未及时响应。请重试。"
 
 #: apps/erp/app/modules/items/ui/Item/ItemCostHistoryChart.tsx:276
 msgid "The unit price of the item at the time of the purchase"

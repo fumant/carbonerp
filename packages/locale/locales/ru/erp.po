@@ -2762,7 +2762,7 @@ msgstr "Калькуляция и проводка"
 
 #: apps/erp/app/components/DeferredFiles.tsx:67
 msgid "Couldn't load documents"
-msgstr ""
+msgstr "Не удалось загрузить документы"
 
 #: apps/erp/app/components/Form/Country.tsx:15
 #: apps/erp/app/modules/resources/ui/Locations/LocationsTable.tsx:82
@@ -10577,7 +10577,7 @@ msgstr "Результатов на странице"
 
 #: apps/erp/app/components/DeferredFiles.tsx:81
 msgid "Retry"
-msgstr ""
+msgstr "Повторить"
 
 #: apps/erp/app/components/Chat/messages/MessageActions.tsx:143
 msgid "Retry response"
@@ -11513,7 +11513,7 @@ msgstr "Установите процентные надбавки по умол
 
 #: apps/erp/app/modules/production/ui/Schedule/Kanban/components/JobCard.tsx:381
 msgid "Set due date"
-msgstr ""
+msgstr "Установить срок"
 
 #: apps/erp/app/modules/sales/ui/Pricing/PriceOverridesTable.tsx:289
 msgid "Set Pricing"
@@ -12745,7 +12745,7 @@ msgstr "Размер детали"
 
 #: apps/erp/app/components/DeferredFiles.tsx:70
 msgid "The storage service didn't respond in time. Please try again."
-msgstr ""
+msgstr "Сервис хранилища не ответил вовремя. Пожалуйста, попробуйте еще раз."
 
 #: apps/erp/app/modules/items/ui/Item/ItemCostHistoryChart.tsx:276
 msgid "The unit price of the item at the time of the purchase"
