@@ -1710,6 +1710,7 @@ msgstr "Ao fazer login, você concorda com os <0>Termos de Serviço</0> e a <1>P
 msgid "CAD Model"
 msgstr "Modelo CAD"
 
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:355
 #: apps/erp/app/routes/x+/settings+/inventory.tsx:337
 msgid "Calculate from BOM"
 msgstr "Calcular a partir da BOM"
@@ -4567,7 +4568,7 @@ msgstr "Editar Tipo de Funcionário"
 msgid "Edit expiration date"
 msgstr "Editar data de expiração"
 
-#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:236
+#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:235
 msgid "Edit Expiry"
 msgstr "Editar Validade"
 
@@ -6396,10 +6397,6 @@ msgstr "Local de Incoterm"
 #: apps/erp/app/modules/resources/ui/useResourcesSubmodules.tsx:44
 msgid "Infrastructure"
 msgstr "Infraestrutura"
-
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:358
-msgid "Inherit earliest input expiry"
-msgstr "Herdar expiração de entrada mais antiga"
 
 #: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:184
 msgid "Inherit From Materials"
@@ -9280,7 +9277,7 @@ msgstr "Saída"
 msgid "Output"
 msgstr "Saída"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:359
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:356
 msgid "Output never outlasts its raw materials. Falls back to the fixed duration when no input has an expiry date."
 msgstr "O resultado nunca dura mais do que suas matérias-primas. Volta à duração fixa quando nenhuma entrada tem uma data de validade."
 
@@ -12166,15 +12163,15 @@ msgstr "Compartilhar Cotação"
 msgid "Shelf life"
 msgstr "Vida útil"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:333
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:329
 msgid "Shelf Life (Days)"
 msgstr "Vida Útil (Dias)"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:341
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:337
 msgid "Shelf Life Start Process"
 msgstr "Processo de Início da Vida Útil"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:296
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:292
 msgid "Shelf-Life"
 msgstr "Vida de Prateleira"
 
@@ -12487,7 +12484,7 @@ msgstr "Análise de Origem"
 #: apps/erp/app/modules/inventory/ui/Receipts/ReceiptsTable.tsx:72
 #: apps/erp/app/modules/inventory/ui/Shipments/ShipmentForm/ShipmentForm.tsx:131
 #: apps/erp/app/modules/inventory/ui/Shipments/ShipmentsTable.tsx:72
-#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:204
+#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:203
 msgid "Source Document"
 msgstr "Documento de Origem"
 
@@ -12610,7 +12607,7 @@ msgstr "Comece a adicionar peças à sua transferência de estoque"
 msgid "Start Date"
 msgstr "Data de Início"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:348
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:344
 msgid "Start Expiration"
 msgstr "Iniciar Expiração"
 
@@ -13773,11 +13770,11 @@ msgstr "Acompanhe todas as alterações em seus pedidos, faturas, clientes e mui
 msgid "Track every change to your orders, invoices, customers, suppliers, and more."
 msgstr "Rastreie todas as alterações em seus pedidos, faturas, clientes, fornecedores e muito mais."
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:299
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:295
 msgid "Track when batches or serials of this item expire."
 msgstr "Rastreie quando os lotes ou números de série deste item expiram."
 
-#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:251
+#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:250
 #: apps/erp/app/modules/inventory/ui/useInventorySubmodules.tsx:70
 #: apps/erp/app/routes/x+/inventory+/tracked-entities.tsx:16
 #: apps/erp/app/routes/x+/issue+/$id.tsx:147
@@ -14612,7 +14609,7 @@ msgstr "Ver Sugestão"
 msgid "View Suppliers"
 msgstr "Ver Fornecedores"
 
-#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:229
+#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:228
 msgid "View Traceability Graph"
 msgstr "Ver Gráfico de Rastreabilidade"
 

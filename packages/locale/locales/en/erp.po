@@ -1710,6 +1710,7 @@ msgstr "By signing in, you agree to the <0>Terms of Service</0> and <1>Privacy P
 msgid "CAD Model"
 msgstr "CAD Model"
 
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:355
 #: apps/erp/app/routes/x+/settings+/inventory.tsx:337
 msgid "Calculate from BOM"
 msgstr "Calculate from BOM"
@@ -4567,7 +4568,7 @@ msgstr "Edit Employee Type"
 msgid "Edit expiration date"
 msgstr "Edit expiration date"
 
-#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:236
+#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:235
 msgid "Edit Expiry"
 msgstr "Edit Expiry"
 
@@ -6396,10 +6397,6 @@ msgstr "Incoterm Location"
 #: apps/erp/app/modules/resources/ui/useResourcesSubmodules.tsx:44
 msgid "Infrastructure"
 msgstr "Infrastructure"
-
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:358
-msgid "Inherit earliest input expiry"
-msgstr "Inherit earliest input expiry"
 
 #: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:184
 msgid "Inherit From Materials"
@@ -9280,7 +9277,7 @@ msgstr "Outgoing"
 msgid "Output"
 msgstr "Output"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:359
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:356
 msgid "Output never outlasts its raw materials. Falls back to the fixed duration when no input has an expiry date."
 msgstr "Output never outlasts its raw materials. Falls back to the fixed duration when no input has an expiry date."
 
@@ -12166,15 +12163,15 @@ msgstr "Share Quote"
 msgid "Shelf life"
 msgstr "Shelf life"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:333
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:329
 msgid "Shelf Life (Days)"
 msgstr "Shelf Life (Days)"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:341
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:337
 msgid "Shelf Life Start Process"
 msgstr "Shelf Life Start Process"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:296
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:292
 msgid "Shelf-Life"
 msgstr "Shelf-Life"
 
@@ -12487,7 +12484,7 @@ msgstr "Source Analysis"
 #: apps/erp/app/modules/inventory/ui/Receipts/ReceiptsTable.tsx:72
 #: apps/erp/app/modules/inventory/ui/Shipments/ShipmentForm/ShipmentForm.tsx:131
 #: apps/erp/app/modules/inventory/ui/Shipments/ShipmentsTable.tsx:72
-#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:204
+#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:203
 msgid "Source Document"
 msgstr "Source Document"
 
@@ -12610,7 +12607,7 @@ msgstr "Start adding parts to your stock transfer"
 msgid "Start Date"
 msgstr "Start Date"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:348
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:344
 msgid "Start Expiration"
 msgstr "Start Expiration"
 
@@ -13773,11 +13770,11 @@ msgstr "Track every change to your orders, invoices, customers, and more."
 msgid "Track every change to your orders, invoices, customers, suppliers, and more."
 msgstr "Track every change to your orders, invoices, customers, suppliers, and more."
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:299
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:295
 msgid "Track when batches or serials of this item expire."
 msgstr "Track when batches or serials of this item expire."
 
-#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:251
+#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:250
 #: apps/erp/app/modules/inventory/ui/useInventorySubmodules.tsx:70
 #: apps/erp/app/routes/x+/inventory+/tracked-entities.tsx:16
 #: apps/erp/app/routes/x+/issue+/$id.tsx:147
@@ -14612,7 +14609,7 @@ msgstr "View Suggestion"
 msgid "View Suppliers"
 msgstr "View Suppliers"
 
-#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:229
+#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:228
 msgid "View Traceability Graph"
 msgstr "View Traceability Graph"
 

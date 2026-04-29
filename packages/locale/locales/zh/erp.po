@@ -1710,6 +1710,7 @@ msgstr "通过登录，您同意<0>服务条款</0>和<1>隐私政策。</1>"
 msgid "CAD Model"
 msgstr "CAD 模型"
 
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:355
 #: apps/erp/app/routes/x+/settings+/inventory.tsx:337
 msgid "Calculate from BOM"
 msgstr "从物料清单计算"
@@ -4567,7 +4568,7 @@ msgstr "编辑员工类型"
 msgid "Edit expiration date"
 msgstr "编辑过期日期"
 
-#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:236
+#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:235
 msgid "Edit Expiry"
 msgstr "编辑过期日期"
 
@@ -6396,10 +6397,6 @@ msgstr "贸易术语地点"
 #: apps/erp/app/modules/resources/ui/useResourcesSubmodules.tsx:44
 msgid "Infrastructure"
 msgstr "基础设施"
-
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:358
-msgid "Inherit earliest input expiry"
-msgstr "继承最早的输入过期日期"
 
 #: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:184
 msgid "Inherit From Materials"
@@ -9280,7 +9277,7 @@ msgstr "出库"
 msgid "Output"
 msgstr "输出"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:359
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:356
 msgid "Output never outlasts its raw materials. Falls back to the fixed duration when no input has an expiry date."
 msgstr "输出永远不会超过其原材料的保质期。当没有输入具有过期日期时，回退到固定期限。"
 
@@ -12166,15 +12163,15 @@ msgstr "分享报价"
 msgid "Shelf life"
 msgstr "保质期"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:333
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:329
 msgid "Shelf Life (Days)"
 msgstr "保质期（天）"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:341
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:337
 msgid "Shelf Life Start Process"
 msgstr "保质期开始流程"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:296
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:292
 msgid "Shelf-Life"
 msgstr "保质期"
 
@@ -12487,7 +12484,7 @@ msgstr "来源分析"
 #: apps/erp/app/modules/inventory/ui/Receipts/ReceiptsTable.tsx:72
 #: apps/erp/app/modules/inventory/ui/Shipments/ShipmentForm/ShipmentForm.tsx:131
 #: apps/erp/app/modules/inventory/ui/Shipments/ShipmentsTable.tsx:72
-#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:204
+#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:203
 msgid "Source Document"
 msgstr "源文档"
 
@@ -12610,7 +12607,7 @@ msgstr "开始向您的库存转移添加零件"
 msgid "Start Date"
 msgstr "开始日期"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:348
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:344
 msgid "Start Expiration"
 msgstr "开始过期"
 
@@ -13773,11 +13770,11 @@ msgstr "跟踪对您的订单、发票、客户等的每一项更改。"
 msgid "Track every change to your orders, invoices, customers, suppliers, and more."
 msgstr "跟踪对您的订单、发票、客户、供应商等的每项更改。"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:299
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:295
 msgid "Track when batches or serials of this item expire."
 msgstr "跟踪此项目的批次或序列号何时过期。"
 
-#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:251
+#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:250
 #: apps/erp/app/modules/inventory/ui/useInventorySubmodules.tsx:70
 #: apps/erp/app/routes/x+/inventory+/tracked-entities.tsx:16
 #: apps/erp/app/routes/x+/issue+/$id.tsx:147
@@ -14612,7 +14609,7 @@ msgstr "查看建议"
 msgid "View Suppliers"
 msgstr "查看供应商"
 
-#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:229
+#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:228
 msgid "View Traceability Graph"
 msgstr "查看可追溯性图表"
 

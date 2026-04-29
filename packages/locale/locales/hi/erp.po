@@ -1710,6 +1710,7 @@ msgstr "साइन इन करके, आप <0>सेवा की शर�
 msgid "CAD Model"
 msgstr "CAD मॉडल"
 
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:355
 #: apps/erp/app/routes/x+/settings+/inventory.tsx:337
 msgid "Calculate from BOM"
 msgstr "BOM से गणना करें"
@@ -4567,7 +4568,7 @@ msgstr "कर्मचारी प्रकार संपादित कर
 msgid "Edit expiration date"
 msgstr "समाप्ति तारीख संपादित करें"
 
-#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:236
+#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:235
 msgid "Edit Expiry"
 msgstr "समाप्ति तिथि संपादित करें"
 
@@ -6396,10 +6397,6 @@ msgstr "इनकोटर्म स्थान"
 #: apps/erp/app/modules/resources/ui/useResourcesSubmodules.tsx:44
 msgid "Infrastructure"
 msgstr "बुनियादी ढांचा"
-
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:358
-msgid "Inherit earliest input expiry"
-msgstr "सबसे पहली इनपुट एक्सपायरी को इनहेरिट करें"
 
 #: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:184
 msgid "Inherit From Materials"
@@ -9280,7 +9277,7 @@ msgstr "बाहर जाने वाला"
 msgid "Output"
 msgstr "आउटपुट"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:359
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:356
 msgid "Output never outlasts its raw materials. Falls back to the fixed duration when no input has an expiry date."
 msgstr "आउटपुट कभी भी अपनी कच्ची सामग्री से अधिक समय तक नहीं रहता। जब किसी इनपुट की समाप्ति तारीख नहीं होती है तो निर्धारित अवधि पर वापस आता है।"
 
@@ -12166,15 +12163,15 @@ msgstr "उद्धरण साझा करें"
 msgid "Shelf life"
 msgstr "शेल्फ लाइफ"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:333
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:329
 msgid "Shelf Life (Days)"
 msgstr "शेल्फ लाइफ (दिन)"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:341
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:337
 msgid "Shelf Life Start Process"
 msgstr "शेल्फ लाइफ स्टार्ट प्रक्रिया"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:296
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:292
 msgid "Shelf-Life"
 msgstr "शेल्फ-लाइफ"
 
@@ -12487,7 +12484,7 @@ msgstr "स्रोत विश्लेषण"
 #: apps/erp/app/modules/inventory/ui/Receipts/ReceiptsTable.tsx:72
 #: apps/erp/app/modules/inventory/ui/Shipments/ShipmentForm/ShipmentForm.tsx:131
 #: apps/erp/app/modules/inventory/ui/Shipments/ShipmentsTable.tsx:72
-#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:204
+#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:203
 msgid "Source Document"
 msgstr "स्रोत दस्तावेज़"
 
@@ -12610,7 +12607,7 @@ msgstr "अपने स्टॉक ट्रांसफर में पा�
 msgid "Start Date"
 msgstr "शुरुआत तारीख"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:348
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:344
 msgid "Start Expiration"
 msgstr "समाप्ति शुरू करें"
 
@@ -13773,11 +13770,11 @@ msgstr "अपने ऑर्डर, इनवॉइस, ग्राहको�
 msgid "Track every change to your orders, invoices, customers, suppliers, and more."
 msgstr "अपने ऑर्डर, इनवॉइस, ग्राहकों, आपूर्तिकर्ताओं और अन्य सभी परिवर्तनों को ट्रैक करें।"
 
-#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:299
+#: apps/erp/app/modules/items/ui/Item/PickMethodForm.tsx:295
 msgid "Track when batches or serials of this item expire."
 msgstr "इस आइटम के बैच या सीरीज़ कब समाप्त होते हैं, इसे ट्रैक करें।"
 
-#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:251
+#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:250
 #: apps/erp/app/modules/inventory/ui/useInventorySubmodules.tsx:70
 #: apps/erp/app/routes/x+/inventory+/tracked-entities.tsx:16
 #: apps/erp/app/routes/x+/issue+/$id.tsx:147
@@ -14612,7 +14609,7 @@ msgstr "सुझाव देखें"
 msgid "View Suppliers"
 msgstr "आपूर्तिकर्ताओं को देखें"
 
-#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:229
+#: apps/erp/app/modules/inventory/ui/Traceability/TrackedEntitiesTable.tsx:228
 msgid "View Traceability Graph"
 msgstr "ट्रेसेबिलिटी ग्राफ देखें"
 

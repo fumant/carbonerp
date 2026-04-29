@@ -11654,7 +11654,7 @@ export type Database = {
           createdBy: string
           customFields: Json | null
           days: number | null
-          inheritEarliestInputExpiry: boolean
+          calculateFromBom: boolean
           itemId: string
           mode: Database["public"]["Enums"]["shelfLifeMode"]
           triggerProcessId: string | null
@@ -11668,7 +11668,7 @@ export type Database = {
           createdBy: string
           customFields?: Json | null
           days?: number | null
-          inheritEarliestInputExpiry?: boolean
+          calculateFromBom?: boolean
           itemId: string
           mode: Database["public"]["Enums"]["shelfLifeMode"]
           triggerProcessId?: string | null
@@ -11682,7 +11682,7 @@ export type Database = {
           createdBy?: string
           customFields?: Json | null
           days?: number | null
-          inheritEarliestInputExpiry?: boolean
+          calculateFromBom?: boolean
           itemId?: string
           mode?: Database["public"]["Enums"]["shelfLifeMode"]
           triggerProcessId?: string | null

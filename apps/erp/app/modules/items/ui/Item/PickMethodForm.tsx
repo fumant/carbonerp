@@ -199,12 +199,8 @@ function ShelfLifeFields({
   );
   const [shelfLifeTriggerProcessId, setShelfLifeTriggerProcessId] =
     useControlField<string | undefined>("shelfLifeTriggerProcessId");
-  const [
-    shelfLifeInheritEarliestInputExpiry,
-    setShelfLifeInheritEarliestInputExpiry
-  ] = useControlField<boolean | undefined>(
-    "shelfLifeInheritEarliestInputExpiry"
-  );
+  const [shelfLifeCalculateFromBom, setShelfLifeCalculateFromBom] =
+    useControlField<boolean | undefined>("shelfLifeCalculateFromBom");
 
   const availableModes = useMemo<ManagedShelfLifeMode[]>(() => {
     return ALL_SHELF_LIFE_MODES.filter((mode) => {
@@ -246,12 +242,12 @@ function ShelfLifeFields({
   useEffect(() => {
     if (replenishmentSystem === "Buy") {
       setShelfLifeTriggerProcessId(undefined);
-      setShelfLifeInheritEarliestInputExpiry(false);
+      setShelfLifeCalculateFromBom(false);
     }
   }, [
     replenishmentSystem,
     setShelfLifeTriggerProcessId,
-    setShelfLifeInheritEarliestInputExpiry
+    setShelfLifeCalculateFromBom
   ]);
 
   // Inherit-from-inputs only applies when mode is Fixed Duration. Coerce
@@ -260,9 +256,9 @@ function ShelfLifeFields({
   // keeps the form submission clean).
   useEffect(() => {
     if (shelfLifeMode !== "Fixed Duration") {
-      setShelfLifeInheritEarliestInputExpiry(false);
+      setShelfLifeCalculateFromBom(false);
     }
-  }, [shelfLifeMode, setShelfLifeInheritEarliestInputExpiry]);
+  }, [shelfLifeMode, setShelfLifeCalculateFromBom]);
 
   const handleToggle = (next: boolean) => {
     setHasShelfLife(next);
@@ -279,7 +275,7 @@ function ShelfLifeFields({
       setShelfLifeMode("");
       setShelfLifeDays(undefined);
       setShelfLifeTriggerProcessId(undefined);
-      setShelfLifeInheritEarliestInputExpiry(false);
+      setShelfLifeCalculateFromBom(false);
     }
   };
 
@@ -351,14 +347,15 @@ function ShelfLifeFields({
               )}
               {/* Make-only: optional input cap. Output expiry never outlasts
                   the earliest input expiry; falls back to the fixed clock
-                  when no input has a date. */}
+                  when no input has a date. Mirrors the inventory-settings
+                  "Calculate from BOM" copy. */}
               <div className="lg:col-span-3">
                 <Boolean
-                  name="shelfLifeInheritEarliestInputExpiry"
-                  label={t`Inherit earliest input expiry`}
+                  name="shelfLifeCalculateFromBom"
+                  label={t`Calculate from BOM`}
                   description={t`Output never outlasts its raw materials. Falls back to the fixed duration when no input has an expiry date.`}
-                  value={!!shelfLifeInheritEarliestInputExpiry}
-                  onChange={(v) => setShelfLifeInheritEarliestInputExpiry(v)}
+                  value={!!shelfLifeCalculateFromBom}
+                  onChange={(v) => setShelfLifeCalculateFromBom(v)}
                 />
               </div>
             </>

@@ -180,7 +180,7 @@ export async function action({ request, params }: ActionFunctionArgs) {
     shelfLifeDays,
     shelfLifeTriggerProcessId,
     shelfLifeTriggerTiming,
-    shelfLifeInheritEarliestInputExpiry,
+    shelfLifeCalculateFromBom,
     ...pickMethodFields
   } = validation.data;
 
@@ -196,7 +196,7 @@ export async function action({ request, params }: ActionFunctionArgs) {
         days: shelfLifeDays,
         triggerProcessId: shelfLifeTriggerProcessId,
         triggerTiming: shelfLifeTriggerTiming,
-        inheritEarliestInputExpiry: shelfLifeInheritEarliestInputExpiry
+        calculateFromBom: shelfLifeCalculateFromBom
       }
     });
   } catch (err) {
@@ -242,8 +242,7 @@ export default function ConsumableInventoryRoute() {
     shelfLifeDays: shelfLife?.days ?? undefined,
     shelfLifeTriggerProcessId: shelfLife?.triggerProcessId ?? undefined,
     shelfLifeTriggerTiming: shelfLife?.triggerTiming ?? undefined,
-    shelfLifeInheritEarliestInputExpiry:
-      shelfLife?.inheritEarliestInputExpiry ?? false,
+    shelfLifeCalculateFromBom: shelfLife?.calculateFromBom ?? false,
     ...getCustomFields(consumableInventory.customFields ?? {})
   };
 
